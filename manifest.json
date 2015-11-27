@@ -1,5 +1,5 @@
 {
-  "manifest_version": 5,
+  "manifest_version": 2,
 
   "name": "baconiscancer",
   "description": "Chrome extension to remind you bacon is cancer in webpage text. )-:",
