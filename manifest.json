@@ -13,8 +13,6 @@
 
   "permissions": [
     "tabs", "webNavigation", "activeTab",
-    "storage",
-    "https://ajax.googleapis.com/"
   ],
 
   "content_scripts": [{
