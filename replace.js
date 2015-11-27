@@ -13,29 +13,12 @@ jQuery.fn.textWalk = function( fn ) {
     return this;
 };
 
-$('body').textWalk(function() {
-    var self = this;
-    var targets = [
-      'plastic',
-      'gas',
-      'gasoline',
-      'shopping bag',
-      'shopping bags',
-      'bottled water',
-      //...
-    ];
-
-    var phrases = [
-      '[OIL PRODUCT]'
-    ];
-
-    var getRandomPhrase = function() {
-        return phrases[Math.floor(Math.random() * phrases.length)];
-    };
-
-    targets
-        .sort(function(a, b) { return b.length - a.length; })
-        .forEach(function(target) {
-            self.data = self.data.replace(target, getRandomPhrase);
-        });
+$(document).ready(function() {
+  $('body').textWalk(function() {
+      if (this.data.indexOf('bacon') >= 0) {
+        console.log("FOUND BACON!");
+      }
+      this.data = this.data.replace(/bacon/gi, 'CANCER');
+  });
 });
+

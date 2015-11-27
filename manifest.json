@@ -1,8 +1,8 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 5,
 
-  "name": "Product of Oil",
-  "description": "Chrome extension to emphasize oil products in webpage text",
+  "name": "baconiscancer",
+  "description": "Chrome extension to remind you bacon is cancer in webpage text. )-:",
   "version": "0.0.1",
 
   "icons": {
@@ -12,15 +12,14 @@
   },
 
   "permissions": [
-    "tabs", "webNavigation", "activeTab"
+    "tabs", "webNavigation", "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/"
   ],
 
-  "content_scripts": [
-    {
-        "matches": ["http://*/*"],
-        "js": ["jquery-2.1.1.min.js", "replace.js"],
-        "run_at": "document_end"
-    }
-  ]
-
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["jquery-2.1.1.min.js", "replace.js"],
+    "run_at": "document_idle"
+  }]
 }
